@@ -1,0 +1,11 @@
+services:
+  web:
+    build: 
+      context: data_visualizer
+    ports:
+      - "8000:5000"
+  generator:
+    build:
+      context: data_source
+  redis:
+    image: "redis:alpine"
